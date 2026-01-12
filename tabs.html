@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Name – Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* --- Tab container --- */
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  .tabs label {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background: #eee;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* Hide radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Active tab styling */
+  input:checked + label {
+    background: white;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+  }
+
+  /* Tab content */
+  .tab-content {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 0 5px 5px 5px;
+    background: white;
+  }
+
+  /* Show the selected tab */
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2,
+  #tab3:checked ~ #content3,
+  #tab4:checked ~ #content4 {
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Your Name</h1>
+<p>Your Title · Your Institution</p>
+
+<!-- Tabs -->
+<div class="tabs">
+  <input type="radio" id="tab1" name="tabs" checked>
+  <label for="tab1">About</label>
+
+  <input type="radio" id="tab2" name="tabs">
+  <label for="tab2">Research</label>
+
+  <input type="radio" id="tab3" name="tabs">
+  <label for="tab3">Publications</label>
+
+  <input type="radio" id="tab4" name="tabs">
+  <label for="tab4">Contact</label>
+</div>
+
+<!-- Tab content -->
+<div id="content1" class="tab-content">
+  <h2>About Me</h2>
+  <p>Short bio goes here.</p>
+</div>
+
+<div id="content2" class="tab-content">
+  <h2>Research</h2>
+  <p>Research overview goes here.</p>
+</div>
+
+<div id="content3" class="tab-content">
+  <h2>Publications</h2>
+  <ul>
+    <li><strong>Paper Title</strong> (Year). Journal. <a href="#">PDF</a></li>
+  </ul>
+</div>
+
+<div id="content4" class="tab-content">
+  <h2>Contact</h2>
+  <p>Email: you@university.edu</p>
+</div>
+
+</body>
+</html>
